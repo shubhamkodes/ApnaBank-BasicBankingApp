@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blue"
+    tools:context=".ui.SplashFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:src="@drawable/ic_splash"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"
+        android:id="@+id/imgView"
+        />
+
+
+
+    <TextView
+        android:id="@+id/titleBasic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/abril_fatface"
+        android:text="Basic"
+        android:textColor="@color/white"
+        android:textSize="66sp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintBottom_toTopOf="@id/titleBanking"
+        android:layout_marginBottom="-20dp"
+        app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/titleBanking"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/abril_fatface"
+        android:text="Banking"
+        android:textColor="@color/white"
+        android:textSize="66sp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintBottom_toTopOf="@id/title_desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="10dp"
+        />
+
+    <TextView
+        android:id="@+id/title_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="70dp"
+        android:text="An Simple &amp; Easy way to manage transaction"
+        android:textColor="@color/white"
+        android:fontFamily="@font/archivo_black"
+        android:textSize="18sp"
+        android:layout_marginStart="30dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

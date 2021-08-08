@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/ic_bg_deep_gradient"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="4dp"
+    app:cardElevation="5dp"
+    app:cardBackgroundColor="@color/lightBlue"
+    app:cardCornerRadius="10dp"
+    android:id="@+id/cardViewAccount"
+    android:layout_height="72dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_profile"
+            />
+
+        <TextView
+            android:id="@+id/tvAccountHolderName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/roboto_medium"
+            android:maxLines="1"
+            android:textColor="@color/textColor"
+            android:text="@string/account_holder_name"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/profile_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvBankAccountNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_light"
+            android:maxLines="1"
+            android:text="@string/ac_4353535335352"
+            android:textColor="@color/lightTextColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="3dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tvAccountHolderName"
+            app:layout_constraintTop_toBottomOf="@id/tvAccountHolderName" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

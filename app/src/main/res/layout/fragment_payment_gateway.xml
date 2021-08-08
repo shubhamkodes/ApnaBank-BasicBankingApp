@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constrainLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.PaymentGatewayFragment"
+    >
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:src="@drawable/baseline_close_black_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFromAccountHolderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Mr. Bhuvan Bam"
+        android:textColor="@color/textColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/imgView"
+        app:layout_constraintStart_toStartOf="@id/imgView"
+        app:layout_constraintTop_toBottomOf="@id/imgView" />
+
+    <TextView
+        android:id="@+id/tvFromBankAccountNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:text="Acc No : 5459398583095803"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@id/tvFromAccountHolderName"
+        app:layout_constraintStart_toStartOf="@id/tvFromAccountHolderName"
+        app:layout_constraintTop_toBottomOf="@id/tvFromAccountHolderName" />
+
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imgView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:outlineAmbientShadowColor="@color/blue"
+        android:outlineSpotShadowColor="@color/blue"
+        app:cardBackgroundColor="@color/backgroundBlue"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_person" />
+    </androidx.cardview.widget.CardView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        app:layout_constraintTop_toTopOf="@id/edAmount"
+        app:layout_constraintStart_toStartOf="@id/edAmount"
+        app:layout_constraintEnd_toEndOf="@id/edAmount"
+        app:layout_constraintBottom_toBottomOf="@id/edAmount"
+        app:lottie_rawRes="@raw/payment_successfull"
+        app:lottie_autoPlay="true"
+        android:visibility="gone"
+        app:lottie_loop="true"/>
+
+
+    <TextView
+        android:id="@+id/tvRsSymbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/archivo_black"
+        android:text="@string/ruppes_symbol"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toStartOf="@id/edAmount"
+        app:layout_constraintTop_toTopOf="@id/edAmount"
+        app:layout_constraintBottom_toBottomOf="@id/edAmount"
+        />
+
+    <EditText
+        android:id="@+id/edAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:inputType="number"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tvFromBankAccountNo"
+        app:layout_constraintEnd_toEndOf="@id/tvFromBankAccountNo"
+        app:layout_constraintStart_toStartOf="@id/tvFromBankAccountNo"
+        android:background="@drawable/bg_searchview"
+        android:hint="@string/_0"
+        android:textSize="46sp"
+        android:fontFamily="@font/archivo_black"
+         android:maxLength="6"
+        android:imeOptions="actionDone"
+         />
+
+    <TextView
+        android:id="@+id/tvAccountHolderName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edAmount"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Sending to "
+        android:textColor="@color/textColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tvBankAccountNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="Acc No : 5459398583095803"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/tvAccountHolderName"
+        app:layout_constraintStart_toStartOf="@id/tvAccountHolderName"
+        app:layout_constraintTop_toBottomOf="@id/tvAccountHolderName" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/img_payment_gateway"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:scaleType="fitXY"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnMakeTransaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/round_send_green_500_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="40dp"
+        app:backgroundTint="@color/green"
+        app:fabCustomSize="60dp"
+        app:tint="@color/white"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

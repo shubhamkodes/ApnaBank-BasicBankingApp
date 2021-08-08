@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.CustomerDetailFragment">
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_arrow_back"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account Profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnBack"
+        app:layout_constraintBottom_toBottomOf="@id/btnBack"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/black"
+        android:fontFamily="@font/archivo_black"
+        />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/blueCardConstrintLayout"
+        android:background="@drawable/ic_card_acc_detail"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/btnBack"
+        >
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_person"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/ivPerson"
+            android:scaleType="centerCrop"
+            />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAccountHolderName"
+            app:layout_constraintStart_toEndOf="@id/ivPerson"
+            app:layout_constraintTop_toTopOf="@id/ivPerson"
+            tools:text="Mr. Bhuvan Bam"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto_medium"
+            />
+        <TextView
+            android:id="@+id/tvBankAccountNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/ivPerson"
+            app:layout_constraintTop_toBottomOf="@id/tvAccountHolderName"
+            tools:text="Acc No : "
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_light"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cr_bal"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvCurrentBalance"
+            app:layout_constraintBottom_toBottomOf="@id/tvCurrentBalance"
+            android:id="@+id/tvCrBalTitle"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginStart="24dp"
+            />
+
+        <TextView
+            android:id="@+id/tvCurrentBalance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="38dp"
+            android:fontFamily="@font/archivo_black"
+            android:maxLines="1"
+            tools:text="@string/x20b9_86_3298_54"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvCrBalTitle"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/backgroundRecentTransaction"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/blueCardConstrintLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/bg_transactions"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-- Recent Transactions --"
+        android:id="@+id/tvRecentTransactionTitle"
+        app:layout_constraintTop_toTopOf="@id/backgroundRecentTransaction"
+        app:layout_constraintStart_toStartOf="@id/backgroundRecentTransaction"
+        app:layout_constraintEnd_toEndOf="@id/backgroundRecentTransaction"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTransactions"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tvRecentTransactionTitle"
+        app:layout_constraintStart_toStartOf="@id/backgroundRecentTransaction"
+        app:layout_constraintEnd_toEndOf="@id/backgroundRecentTransaction"
+        app:layout_constraintBottom_toBottomOf="@id/backgroundRecentTransaction"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="12dp"
+        tools:listitem="@layout/layout_transaction"
+        android:overScrollMode="never"
+        tools:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/ivNoTransaction"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintTop_toBottomOf="@id/tvRecentTransactionTitle"
+        app:layout_constraintStart_toStartOf="@id/backgroundRecentTransaction"
+        app:layout_constraintEnd_toEndOf="@id/backgroundRecentTransaction"
+        app:layout_constraintBottom_toBottomOf="@id/backgroundRecentTransaction"
+       android:scaleType="fitStart"
+        android:src="@drawable/img_no_records"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@id/btnMakeTransaction"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="30dp"
+        android:text="@string/make_transaction"
+        app:icon="@drawable/ic_new_payment"
+        android:background="@drawable/bg_round_button"
+        android:backgroundTint="@color/backgroundBlue"
+        android:theme="@style/Button.color"
+
+        />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

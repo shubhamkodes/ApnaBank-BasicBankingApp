@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">ApnaBank</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="account_holder_name">Account Holder Name</string>
+    <string name="ac_4353535335352">Ac : 4353535335352</string>
+    <string name="all_customers">All Customers</string>
+    <string name="x20b9_86_3298_54">₹ 86,3298.54</string>
+    <string name="cr_bal">Cr Bal :</string>
+
+    <string name="acc_no">Acc No:   </string>
+    <string name="sending_to">Sending to </string>
+    <string name="ruppes_symbol">₹</string>
+    <string name="new_payment">New Payment</string>
+    <string name="make_transaction">Make Transaction</string>
+
+
+    <string name="january">Jan</string>
+    <string name="february">Feb</string>
+    <string name="march">Mar</string>
+    <string name="april">Apr</string>
+    <string name="may">May</string>
+    <string name="june">Jun</string>
+    <string name="july">Jul</string>
+    <string name="august">Aug</string>
+    <string name="september">Sept</string>
+    <string name="october">Oct</string>
+    <string name="november">November</string>
+    <string name="december">December</string>
+    <string name="_0">0</string>
+</resources>

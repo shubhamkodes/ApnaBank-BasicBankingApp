@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.HomeFragment">
+
+    <TextView
+        android:id="@+id/tvAllCustomers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:fontFamily="@font/archivo_black"
+        android:textSize="26sp"
+        android:layout_marginStart="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:drawablePadding="10dp"
+        android:text="@string/all_customers"
+        android:gravity="center_vertical"
+        app:drawableStartCompat="@drawable/ic_bank" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/rvAllAcounts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAllCustomers"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:overScrollMode="never"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        tools:listitem="@layout/cardview_account"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

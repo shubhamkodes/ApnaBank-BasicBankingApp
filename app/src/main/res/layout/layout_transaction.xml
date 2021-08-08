@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/lightBlue"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/img_transaction"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitXY"
+        android:layout_marginStart="5dp"
+        />
+    <TextView
+        android:id="@+id/tvAccountHolderName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/imgView"
+        app:layout_constraintTop_toTopOf="@id/imgView"
+        android:text="Mr. Bhuvan Bam"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/textColor"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:textSize="16sp"
+        />
+    <TextView
+        android:id="@+id/tvTransactionDateTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvAccountHolderName"
+        android:text="14 Feb, 2021"
+        app:layout_constraintStart_toStartOf="@id/tvAccountHolderName"
+        android:textColor="@color/lightTextColor"
+        android:fontFamily="@font/roboto_light"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        />
+
+    <TextView
+        android:id="@+id/tvTransactionAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvAccountHolderName"
+        android:text="+8,200.00"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginEnd="10dp"
+
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
